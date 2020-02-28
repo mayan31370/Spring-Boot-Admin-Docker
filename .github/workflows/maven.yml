@@ -16,7 +16,7 @@ jobs:
     - name: Build with Maven
       run: mvn clean package -DskipTests=true
     - name: Build Docker
-      run: docker build -t mayan31370/springboot-admin-server .
+      run: docker build -t springboot-admin-server:latest .
     - name: Push Docker to DockerHub
       if: success()
       uses: manusa/actions-publish-docker@master
